@@ -1091,5 +1091,63 @@ cdef class SyscallFilter:
         if rc != 0:
             raise RuntimeError(str.format("Library error (errno = {0})", rc))
 
+cdef class Kver:
+    """ Python object representing the Kernel Version enumeration. """
+    UNDEF = libseccomp.SCMP_KV_UNDEF
+    v4_0 = libseccomp.SCMP_KV_4_0
+    v4_1 = libseccomp.SCMP_KV_4_1
+    v4_2 = libseccomp.SCMP_KV_4_2
+    v4_3 = libseccomp.SCMP_KV_4_3
+    v4_4 = libseccomp.SCMP_KV_4_4
+    v4_5 = libseccomp.SCMP_KV_4_5
+    v4_6 = libseccomp.SCMP_KV_4_6
+    v4_7 = libseccomp.SCMP_KV_4_7
+    v4_8 = libseccomp.SCMP_KV_4_8
+    v4_9 = libseccomp.SCMP_KV_4_9
+    v4_10 = libseccomp.SCMP_KV_4_10
+    v4_11 = libseccomp.SCMP_KV_4_11
+    v4_12 = libseccomp.SCMP_KV_4_12
+    v4_13 = libseccomp.SCMP_KV_4_13
+    v4_14 = libseccomp.SCMP_KV_4_14
+    v4_15 = libseccomp.SCMP_KV_4_15
+    v4_16 = libseccomp.SCMP_KV_4_16
+    v4_17 = libseccomp.SCMP_KV_4_17
+    v4_18 = libseccomp.SCMP_KV_4_18
+    v4_19 = libseccomp.SCMP_KV_4_19
+    v4_20 = libseccomp.SCMP_KV_4_20
+    v5_0 = libseccomp.SCMP_KV_5_0
+    v5_1 = libseccomp.SCMP_KV_5_1
+    v5_2 = libseccomp.SCMP_KV_5_2
+    v5_3 = libseccomp.SCMP_KV_5_3
+    v5_4 = libseccomp.SCMP_KV_5_4
+    v5_5 = libseccomp.SCMP_KV_5_5
+    v5_6 = libseccomp.SCMP_KV_5_6
+    v5_7 = libseccomp.SCMP_KV_5_7
+    v5_8 = libseccomp.SCMP_KV_5_8
+    v5_9 = libseccomp.SCMP_KV_5_9
+    v5_10 = libseccomp.SCMP_KV_5_10
+    v5_11 = libseccomp.SCMP_KV_5_11
+    v5_12 = libseccomp.SCMP_KV_5_12
+    v5_13 = libseccomp.SCMP_KV_5_13
+    v5_14 = libseccomp.SCMP_KV_5_14
+    v5_15 = libseccomp.SCMP_KV_5_15
+    v5_16 = libseccomp.SCMP_KV_5_16
+    v5_17 = libseccomp.SCMP_KV_5_17
+    v5_18 = libseccomp.SCMP_KV_5_18
+    v5_19 = libseccomp.SCMP_KV_5_19
+    v6_0 = libseccomp.SCMP_KV_6_0
+    v6_1 = libseccomp.SCMP_KV_6_1
+    v6_2 = libseccomp.SCMP_KV_6_2
+    v6_3 = libseccomp.SCMP_KV_6_3
+    v6_4 = libseccomp.SCMP_KV_6_4
+    v6_5 = libseccomp.SCMP_KV_6_5
+    v6_6 = libseccomp.SCMP_KV_6_6
+    v6_7 = libseccomp.SCMP_KV_6_7
+    v6_8 = libseccomp.SCMP_KV_6_8
+    v6_9 = libseccomp.SCMP_KV_6_9
+    v6_10 = libseccomp.SCMP_KV_6_10
+    v6_11 = libseccomp.SCMP_KV_6_11
+    v6_12 = libseccomp.SCMP_KV_6_12
+
 # kate: syntax python;
 # kate: indent-mode python; space-indent on; indent-width 4; mixedindent off;
