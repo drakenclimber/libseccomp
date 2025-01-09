@@ -33,6 +33,10 @@
 /* NOTE: this was taken from the Linux Kernel sources */
 #define MAX_ERRNO		4095
 
+/* TODO: is there a way to automatically calculate this by traversing
+ * syscalls.csv? Currently the max syscall number is pwritev2 in x32 at 547 */
+#define MAX_SYSCALL_NUM		600
+
 struct db_filter_col;
 
 #ifdef HAVE_LINUX_SECCOMP_H

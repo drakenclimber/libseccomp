@@ -1381,7 +1381,7 @@ uint32_t db_col_attr_read(const struct db_filter_col *col,
 int db_col_attr_set(struct db_filter_col *col,
 		    enum scmp_filter_attr attr, uint32_t value)
 {
-	int rc = 0;
+	int rc = 0, iter;
 
 	switch (attr) {
 	case SCMP_FLTATR_ACT_DEFAULT:
@@ -1463,11 +1463,26 @@ int db_col_attr_set(struct db_filter_col *col,
 		else
 			return -EINVAL;
 		db_col_precompute_reset(col);
+		rc = db_add_known_syscalls(col);
 		break;
 	case SCMP_FLTATR_CTL_KVER:
 		if (value <= SCMP_KV_UNDEF || value >=__SCMP_KV_MAX)
 			return -EINVAL;
+		for (iter = 0; iter < col->filter_cnt; iter++) {
+			if (col->filters[iter]->arch->token != SCMP_ARCH_X32 &&
+			    col->filters[iter]->arch->token != SCMP_ARCH_X86 &&
+			    col->filters[iter]->arch->token != SCMP_ARCH_X86_64)
+				return -EOPNOTSUPP;
+		}
+
 		col->attr.kver = value;
+
+		/* Create a rule for every syscall that existed up to and
+		 * prior to attr.kver.  libseccomp capably handles duplicate
+		 * rules for a syscall, so if the user adds more rules after
+		 * setting this attribute, libseccomp will simply replace
+		 * the rules added by the unknown-syscall logic */
+		rc = db_add_known_syscalls(col);
 		break;
 	default:
 		rc = -EINVAL;
@@ -2719,4 +2734,56 @@ void db_col_precompute_reset(struct db_filter_col *col)
 
 	gen_bpf_release(col->prgm_bpf);
 	col->prgm_bpf = NULL;
+}
+
+int db_add_known_syscalls(struct db_filter_col *col)
+{
+	struct db_api_rule_list *rule = NULL;
+	ssize_t chain_size;
+	struct db_api_arg *chain = NULL;
+	int rc, iter, syscall_num;
+	bool added;
+
+	chain_size = sizeof(*chain) * ARG_COUNT_MAX;
+	chain = zmalloc(chain_size);
+	if (chain == NULL)
+		return -ENOMEM;
+
+	/* create a checkpoint */
+	rc = db_col_transaction_start(col, false);
+	if (rc != 0)
+		goto add_failure;
+
+	for (syscall_num = 0; syscall_num < MAX_SYSCALL_NUM; syscall_num++) {
+		for (iter = 0; iter < col->filter_cnt; iter++) {
+			rule = _db_rule_new(1, col->attr.act_default,
+					    syscall_num, chain);
+			if (rule == NULL) {
+				rc = -ENOMEM;
+				goto add_failure;
+			}
+
+			rc = arch_add_kver_rule(col->filters[iter], rule,
+						col->attr.kver, &added);
+			if (rc != 0)
+				goto add_failure;
+
+			free(rule);
+			rule = NULL;
+		}
+	}
+
+add_failure:
+	/* commit the transaction or abort */
+	if (rc == 0)
+		db_col_transaction_commit(col, false);
+	else
+		db_col_transaction_abort(col, false);
+
+	if (rule != NULL)
+		free(rule);
+	if (chain != NULL)
+		free(chain);
+
+	return 0;
 }
