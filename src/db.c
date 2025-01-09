@@ -1468,6 +1468,8 @@ int db_col_attr_set(struct db_filter_col *col,
 		if (value <= SCMP_KV_UNDEF || value >=__SCMP_KV_MAX)
 			return -EINVAL;
 		col->attr.kver = value;
+
+		rc = db_add_known_syscalls(col);
 		break;
 	default:
 		rc = -EINVAL;
@@ -2698,4 +2700,54 @@ void db_col_precompute_reset(struct db_filter_col *col)
 
 	gen_bpf_release(col->prgm_bpf);
 	col->prgm_bpf = NULL;
+}
+
+int db_add_known_syscalls(struct db_filter_col *col)
+{
+	struct db_api_rule_list *rule = NULL;
+	ssize_t chain_size;
+	struct db_api_arg *chain = NULL;
+	int rc, iter, syscall_num;
+	int max_syscall_num = 600;
+	bool added;
+
+	chain_size = sizeof(*chain) * ARG_COUNT_MAX;
+	chain = zmalloc(chain_size);
+	if (chain == NULL)
+		return -ENOMEM;
+
+	/* create a checkpoint */
+	rc = db_col_transaction_start(col);
+	if (rc != 0)
+		goto add_failure;
+
+	for (syscall_num = 0; syscall_num < max_syscall_num; syscall_num++) {
+		for (iter = 0; iter < col->filter_cnt; iter++) {
+			rule = _db_rule_new(1, col->attr.act_default,
+					    syscall_num, chain);
+			if (rule == NULL) {
+				rc = -ENOMEM;
+				goto add_failure;
+			}
+
+			rc = arch_add_kver_rule(col->filters[iter], rule,
+						col->attr.kver, &added);
+			if (added == false)
+				free(rule);
+			if (rc != 0)
+				goto add_failure;
+		}
+	}
+
+add_failure:
+	/* commit the transaction or abort */
+	if (rc == 0)
+		db_col_transaction_commit(col);
+	else
+		db_col_transaction_abort(col);
+
+	if (chain != NULL)
+		free(chain);
+
+	return 0;
 }

@@ -363,10 +363,16 @@ API int seccomp_merge(scmp_filter_ctx ctx_dst, scmp_filter_ctx ctx_src)
 	if (db_col_valid(col_dst) || db_col_valid(col_src))
 		return _rc_filter(-EINVAL);
 
-	/* NOTE: only the default action, NNP, and TSYNC settings must match */
+	/*
+	 * NOTE: only the default action, NNP, TSYNC, and kernel version
+	 * settings must match
+	 */
 	if ((col_dst->attr.act_default != col_src->attr.act_default) ||
 	    (col_dst->attr.nnp_enable != col_src->attr.nnp_enable) ||
-	    (col_dst->attr.tsync_enable != col_src->attr.tsync_enable))
+	    (col_dst->attr.tsync_enable != col_src->attr.tsync_enable) ||
+	    (col_dst->attr.act_unknown != col_src->attr.act_unknown) ||
+	    (col_dst->attr.kver != col_src->attr.kver))
+
 		return _rc_filter(-EINVAL);
 
 	return _rc_filter(db_col_merge(col_dst, col_src));

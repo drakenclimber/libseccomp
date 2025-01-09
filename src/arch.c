@@ -477,3 +477,42 @@ rule_add_return:
 		free(rule_dup);
 	return rc;
 }
+
+#include <stdio.h>
+int arch_add_kver_rule(struct db_filter *db, struct db_api_rule_list *rule,
+		       enum scmp_kver kver, bool *added)
+{
+	struct db_sys_list *s_iter;
+	enum scmp_kver added_ver;
+	const char *syscall_name;
+	bool exists = false;
+	int rc;
+
+	*added = false;
+
+	db_list_foreach(s_iter, db->syscalls) {
+		if (rule->syscall == s_iter->num)
+			exists = true;
+	}
+
+	if (exists)
+		return 0;
+
+	syscall_name = (db->arch->syscall_resolve_num_raw)(rule->syscall);
+	if (syscall_name == NULL)
+		return 0;
+
+	added_ver = (db->arch->syscall_num_kver)(rule->syscall);
+	if ( added_ver > kver) {
+		fprintf(stderr, "skipping %s\n", syscall_name);
+		return 0;
+	}
+
+	*added = true;
+	if (db->arch->rule_add == NULL)
+		rc = db_rule_add(db, rule);
+	else
+		rc = (db->arch->rule_add)(db, rule);
+
+	return rc;
+}

@@ -458,7 +458,11 @@ static int _gen_pfc_arch(const struct db_filter_col *col,
 	_indent(fds, 1);
 	fprintf(fds, "# default action\n");
 	_indent(fds, 1);
-	_pfc_action(fds, col->attr.act_default);
+
+	if (col->attr.kver != SCMP_KV_UNDEF)
+		_pfc_action(fds, col->attr.act_unknown);
+	else
+		_pfc_action(fds, col->attr.act_default);
 
 arch_return:
 	while (p_head != NULL) {

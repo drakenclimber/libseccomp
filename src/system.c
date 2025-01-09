@@ -378,6 +378,14 @@ int sys_filter_load(struct db_filter_col *col, bool rawrc)
 	bool listener_req;
 	struct bpf_program *prgm = NULL;
 
+#if 0
+	if (col->attr.kver != SCMP_KV_UNDEF) {
+		rc = db_add_known_syscalls(col);
+		if (rc < 0)
+			return rc;
+	}
+#endif
+
 	rc = db_col_precompute(col);
 	if (rc < 0)
 		return rc;
