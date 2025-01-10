@@ -1,0 +1,31 @@
+#
+# libseccomp regression test automation data
+#
+# Copyright (c) 2025 Oracle and/or its affiliates.
+# Author: Tom Hromatka <tom.hromatka@oracle.com>
+#
+
+test type: bpf-sim
+
+# Testname		Arch	Syscall	Arg0	Arg1	Arg2	Arg3	Arg4	Arg5	Result
+61-sim-kernel_version	+x86_64,+x32	read	N	N	N	N	N	N	ALLOW
+61-sim-kernel_version	+x86_64,+x32	write	N	N	N	N	N	N	ALLOW
+61-sim-kernel_version	+x86_64,+x32	poll	N	N	N	N	N	N	ALLOW
+61-sim-kernel_version	+x86_64,+x32	nanosleep	N	N	N	N	N	N	ALLOW
+
+61-sim-kernel_version	+x86_64,+x32	2-6	N	N	N	N	N	N	KILL
+61-sim-kernel_version	+x86_64,+x32	8-34	N	N	N	N	N	N	KILL
+61-sim-kernel_version	+x86_64,+x32	36-334	N	N	N	N	N	N	KILL
+61-sim-kernel_version	+x86_64,+x32	424-456	N	N	N	N	N	N	KILL
+
+61-sim-kernel_version	+x86_64,+x32	457-466	N	N	N	N	N	N	ERRNO(3)
+
+test type: bpf-sim-fuzz
+
+# Testname		StressCount
+61-sim-kernel_version	5
+
+test type: bpf-valgrind
+
+# Testname
+61-sim-kernel_version
