@@ -29,17 +29,17 @@ from Cython.Build import cythonize
 
 setup(
 	name = "seccomp",
-	version = os.environ["VERSION_RELEASE"],
+	version = os.environ.get("VERSION_RELEASE"),
 	description = "Python binding for libseccomp",
 	long_description = "Python API for the Linux Kernel's syscall filtering capability, seccomp.",
 	url = "https://github.com/seccomp/libseccomp",
-	maintainer = "Paul Moore",
-	maintainer_email = "paul@paul-moore.com",
-	license = "LGPLv2.1",
+	maintainer = ["Paul Moore", "Tom Hromatka"],
+	maintainer_email = ["paul@paul-moore.com", "tom.hromatka@oracle.com"],
+	license = "LGPL-2.1",
 	platforms = "Linux",
 	ext_modules = cythonize([
 		Extension("seccomp", ["seccomp.pyx"],
 			# unable to handle libtool libraries directly
-			extra_objects=["../.libs/libseccomp.a"]),
+			extra_objects=["libseccomp.a"]),
 	])
 )
