@@ -20,36 +20,43 @@
 # along with this library; if not, see <http://www.gnu.org/licenses>.
 #
 
+#######################################################
+#### WARNING - to generate proper headers for x32, you
+####           must install the glibc 32-bit headers
+####
+####           apt install libc6-dev-x32
+####
+#######################################################
+
 from subprocess import TimeoutExpired
-import system_calls
 import subprocess
 import argparse
 import os
 
-kernel_versions = ['3.0', '3.1', '3.2', '3.3', '3.4', '3.5', '3.6', '3.7',
-                   '3.8', '3.9', '3.10', '3.11', '3.12', '3.13', '3.14',
-                   '3.15', '3.16', '3.17', '3.18', '3.19', '4.0', '4.1',
-                   '4.2', '4.3', '4.4', '4.5', '4.6', '4.7', '4.8', '4.9',
-                   '4.10', '4.11', '4.12', '4.13', '4.14', '4.15', '4.16',
-                   '4.17', '4.18', '4.19', '4.20', '5.0', '5.1', '5.2',
-                   '5.3', '5.4', '5.5', '5.6', '5.7', '5.8', '5.9', '5.10',
-                   '5.11', '5.12', '5.13', '5.14', '5.15', '5.16', '5.17',
-                   '5.18', '5.19', '6.0', '6.1', '6.2', '6.3', '6.4', '6.5',
-                   '6.6', '6.7', '6.8', '6.9', '6.10', '6.11', '6.12',
-                   '6.13']
+#kernel_versions = ['3.0', '3.1', '3.2', '3.3', '3.4', '3.5', '3.6', '3.7',
+#                   '3.8', '3.9', '3.10', '3.11', '3.12', '3.13', '3.14',
+#                   '3.15', '3.16', '3.17', '3.18', '3.19', '4.0', '4.1',
+#                   '4.2', '4.3', '4.4', '4.5', '4.6', '4.7', '4.8', '4.9',
+#                   '4.10', '4.11', '4.12', '4.13', '4.14', '4.15', '4.16',
+#                   '4.17', '4.18', '4.19', '4.20', '5.0', '5.1', '5.2',
+#                   '5.3', '5.4', '5.5', '5.6', '5.7', '5.8', '5.9', '5.10',
+#                   '5.11', '5.12', '5.13', '5.14', '5.15', '5.16', '5.17',
+#                   '5.18', '5.19', '6.0', '6.1', '6.2', '6.3', '6.4', '6.5',
+#                   '6.6', '6.7', '6.8', '6.9', '6.10', '6.11', '6.12',
+#                   '6.13']
+kernel_versions = ['6.17']
 
 def parse_args():
     parser = argparse.ArgumentParser('Script to populate the syscalls.csv kernel versions',
                                      formatter_class=argparse.RawTextHelpFormatter)
     parser.add_argument('-d', '--datapath', required=True, type=str, default=None,
-                        help="Path to the directory where @hrw's"
-                        'syscalls-table tool output the version data')
+                        help="Path to the local copy of @hrw's syscalls-table tool")
     parser.add_argument('-k', '--kernelpath', required=True, type=str, default=None,
                         help="Path to the kernel source directory")
     parser.add_argument('-V', '--versions', required=False, type=str, default=None,
                         help="Comma-separated list of kernel versions to build, e.g "
-                        "3.0,6.1,6.10.  If not specified all kernel version tables "
-                        "are built")
+                        "3.0,6.1,6.10.  If not specified all known kernel version "
+                        "tables are built")
     parser.add_argument('-v', '--verbose', action='store_true',
                         help='Show verbose warnings')
 
@@ -113,12 +120,6 @@ def run(command, verbose=False, shell=False, timeout=None):
     return ret, out, err
 
 def main(args):
-
-    pip_cmd = 'cd {};pip install .'.format(args.datapath)
-    ret, out, err = run(pip_cmd, shell=True)
-    if ret != 0:
-        raise KeyError('pip install failed: {}'.format(ret))
-
     for kver in args.versions:
         print('Building version table for kernel {}'.format(kver))
 
