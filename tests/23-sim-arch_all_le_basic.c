@@ -53,6 +53,9 @@ int main(int argc, char *argv[])
 	rc = seccomp_arch_add(ctx, seccomp_arch_resolve_name("x32"));
 	if (rc != 0)
 		goto out;
+	rc = seccomp_arch_add(ctx, seccomp_arch_resolve_name("alpha"));
+	if (rc != 0)
+		goto out;
 	rc = seccomp_arch_add(ctx, seccomp_arch_resolve_name("arm"));
 	if (rc != 0)
 		goto out;

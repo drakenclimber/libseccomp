@@ -140,6 +140,11 @@ struct scmp_arg_cmp {
 #define SCMP_ARCH_X32		(EM_X86_64|__AUDIT_ARCH_LE)
 
 /**
+ * The Alpha architecture tokens
+ */
+#define SCMP_ARCH_ALPHA		AUDIT_ARCH_ALPHA
+
+/**
  * The ARM architecture tokens
  */
 #define SCMP_ARCH_ARM		AUDIT_ARCH_ARM
