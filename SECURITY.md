@@ -20,7 +20,7 @@ before it is made public, but we will make every effort to address the issue as
 quickly as possible and shorten the disclosure window.
 
 * Paul Moore, paul@paul-moore.com
-* Tom Hromatka, tom.hromatka@oracle.com
+* Tom Hromatka, tom.hromatka@gmail.com
 
 ### Resolving Sensitive Security Issues
 

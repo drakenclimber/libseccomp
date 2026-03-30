@@ -2,7 +2,7 @@
  * Seccomp Library
  *
  * Copyright (c) 2025 Oracle and/or its affiliates.
- * Author: Tom Hromatka <tom.hromatka@oracle.com>
+ * Author: Tom Hromatka <tom.hromatka@gmail.com>
  */
 
 /*

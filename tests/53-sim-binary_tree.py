@@ -4,7 +4,7 @@
 # Seccomp Library test program
 #
 # Copyright (c) 2018 Oracle and/or its affiliates.  All rights reserved.
-# Author: Tom Hromatka <tom.hromatka@oracle.com>
+# Author: Tom Hromatka <tom.hromatka@gmail.com>
 #
 
 #

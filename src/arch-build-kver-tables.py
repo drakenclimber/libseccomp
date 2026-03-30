@@ -3,7 +3,7 @@
 # Seccomp Library program to build the kernel version tables
 #
 # Copyright (c) 2025 Oracle and/or its affiliates.  All rights reserved.
-# Author: Tom Hromatka <tom.hromatka@oracle.com>
+# Author: Tom Hromatka <tom.hromatka@gmail.com>
 #
 
 #

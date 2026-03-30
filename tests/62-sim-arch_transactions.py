@@ -5,7 +5,7 @@
 #
 # Copyright (c) 2023 Microsoft Corporation <paulmoore@microsoft.com>
 # Author: Paul Moore <paul@paul-moore.com>
-# Author: Tom Hromatka <tom.hromatka@oracle.com>
+# Author: Tom Hromatka <tom.hromatka@gmail.com>
 #
 
 #

@@ -4,7 +4,7 @@
 # Seccomp Library program to build the syscalls.csv file
 #
 # Copyright (c) 2025 Oracle and/or its affiliates.  All rights reserved.
-# Author: Tom Hromatka <tom.hromatka@oracle.com>
+# Author: Tom Hromatka <tom.hromatka@gmail.com>
 #
 
 #

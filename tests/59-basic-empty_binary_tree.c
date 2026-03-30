@@ -2,7 +2,7 @@
  * Seccomp Library test program
  *
  * Copyright (c) 2018-2020 Oracle and/or its affiliates.
- * Author: Tom Hromatka <tom.hromatka@oracle.com>
+ * Author: Tom Hromatka <tom.hromatka@gmail.com>
  */
 
 /*
