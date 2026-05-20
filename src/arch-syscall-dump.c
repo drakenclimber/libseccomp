@@ -104,14 +104,14 @@ int main(int argc, char *argv[])
 		case SCMP_ARCH_X32:
 			sys = x32_syscall_iterate(iter);
 			break;
-		case SCMP_ARCH_ALPHA:
-			sys = alpha_syscall_iterate(iter);
-			break;
 		case SCMP_ARCH_ARM:
 			sys = arm_syscall_iterate(iter);
 			break;
 		case SCMP_ARCH_AARCH64:
 			sys = aarch64_syscall_iterate(iter);
+			break;
+		case SCMP_ARCH_ALPHA:
+			sys = alpha_syscall_iterate(iter);
 			break;
 		case SCMP_ARCH_LOONGARCH64:
 			sys = loongarch64_syscall_iterate(iter);

@@ -287,6 +287,129 @@
 #define __PNR_rseq_slice_yield			-10253
 #define __PNR_uprobe				-10254
 #define __PNR_open_tree_attr			-10255
+#define __PNR_dipc				-10256
+#define __PNR_exec_with_loader			-10257
+#define __PNR_getdtablesize			-10258
+#define __PNR_gethostname			-10259
+#define __PNR_getxgid				-10260
+#define __PNR_getxpid				-10261
+#define __PNR_getxuid				-10262
+#define __PNR_old_adjtimex			-10263
+#define __PNR_oldumount				-10264
+#define __PNR_osf_adjtime			-10265
+#define __PNR_osf_afs_syscall			-10266
+#define __PNR_osf_alt_plock			-10267
+#define __PNR_osf_alt_setsid			-10268
+#define __PNR_osf_alt_sigpending		-10269
+#define __PNR_osf_asynch_daemon			-10270
+#define __PNR_osf_audcntl			-10271
+#define __PNR_osf_audgen			-10272
+#define __PNR_osf_chflags			-10273
+#define __PNR_osf_execve			-10274
+#define __PNR_osf_exportfs			-10275
+#define __PNR_osf_fchflags			-10276
+#define __PNR_osf_fdatasync			-10277
+#define __PNR_osf_fpathconf			-10278
+#define __PNR_osf_fstat				-10279
+#define __PNR_osf_fstatfs			-10280
+#define __PNR_osf_fstatfs64			-10281
+#define __PNR_osf_fuser				-10282
+#define __PNR_osf_getaddressconf		-10283
+#define __PNR_osf_getdirentries			-10284
+#define __PNR_osf_getdomainname			-10285
+#define __PNR_osf_getfh				-10286
+#define __PNR_osf_getfsstat			-10287
+#define __PNR_osf_gethostid			-10288
+#define __PNR_osf_getitimer			-10289
+#define __PNR_osf_getlogin			-10290
+#define __PNR_osf_getmnt			-10291
+#define __PNR_osf_getrusage			-10292
+#define __PNR_osf_getsysinfo			-10293
+#define __PNR_osf_gettimeofday			-10294
+#define __PNR_osf_kloadcall			-10295
+#define __PNR_osf_kmodcall			-10296
+#define __PNR_osf_lstat				-10297
+#define __PNR_osf_memcntl			-10298
+#define __PNR_osf_mincore			-10299
+#define __PNR_osf_mount				-10300
+#define __PNR_osf_mremap			-10301
+#define __PNR_osf_msfs_syscall			-10302
+#define __PNR_osf_msleep			-10303
+#define __PNR_osf_mvalid			-10304
+#define __PNR_osf_mwakeup			-10305
+#define __PNR_osf_naccept			-10306
+#define __PNR_osf_nfssvc			-10307
+#define __PNR_osf_ngetpeername			-10308
+#define __PNR_osf_ngetsockname			-10309
+#define __PNR_osf_nrecvfrom			-10310
+#define __PNR_osf_nrecvmsg			-10311
+#define __PNR_osf_nsendmsg			-10312
+#define __PNR_osf_ntp_adjtime			-10313
+#define __PNR_osf_ntp_gettime			-10314
+#define __PNR_osf_old_creat			-10315
+#define __PNR_osf_old_fstat			-10316
+#define __PNR_osf_old_getpgrp			-10317
+#define __PNR_osf_old_killpg			-10318
+#define __PNR_osf_old_lstat			-10319
+#define __PNR_osf_old_open			-10320
+#define __PNR_osf_old_sigaction			-10321
+#define __PNR_osf_old_sigblock			-10322
+#define __PNR_osf_old_sigreturn			-10323
+#define __PNR_osf_old_sigsetmask		-10324
+#define __PNR_osf_old_sigvec			-10325
+#define __PNR_osf_old_stat			-10326
+#define __PNR_osf_old_vadvise			-10327
+#define __PNR_osf_old_vtrace			-10328
+#define __PNR_osf_old_wait			-10329
+#define __PNR_osf_oldquota			-10330
+#define __PNR_osf_pathconf			-10331
+#define __PNR_osf_pid_block			-10332
+#define __PNR_osf_pid_unblock			-10333
+#define __PNR_osf_plock				-10334
+#define __PNR_osf_priocntlset			-10335
+#define __PNR_osf_profil			-10336
+#define __PNR_osf_proplist_syscall		-10337
+#define __PNR_osf_reboot			-10338
+#define __PNR_osf_revoke			-10339
+#define __PNR_osf_sbrk				-10340
+#define __PNR_osf_security			-10341
+#define __PNR_osf_select			-10342
+#define __PNR_osf_set_program_attributes	-10343
+#define __PNR_osf_set_speculative		-10344
+#define __PNR_osf_sethostid			-10345
+#define __PNR_osf_setitimer			-10346
+#define __PNR_osf_setlogin			-10347
+#define __PNR_osf_setsysinfo			-10348
+#define __PNR_osf_settimeofday			-10349
+#define __PNR_osf_signal			-10350
+#define __PNR_osf_sigprocmask			-10351
+#define __PNR_osf_sigsendset			-10352
+#define __PNR_osf_sigstack			-10353
+#define __PNR_osf_sigwaitprim			-10354
+#define __PNR_osf_sstk				-10355
+#define __PNR_osf_stat				-10356
+#define __PNR_osf_statfs			-10357
+#define __PNR_osf_statfs64			-10358
+#define __PNR_osf_subsys_info			-10359
+#define __PNR_osf_swapctl			-10360
+#define __PNR_osf_swapon			-10361
+#define __PNR_osf_syscall			-10362
+#define __PNR_osf_sysinfo			-10363
+#define __PNR_osf_table				-10364
+#define __PNR_osf_uadmin			-10365
+#define __PNR_osf_usleep_thread			-10366
+#define __PNR_osf_uswitch			-10367
+#define __PNR_osf_utc_adjtime			-10368
+#define __PNR_osf_utc_gettime			-10369
+#define __PNR_osf_utimes			-10370
+#define __PNR_osf_utsname			-10371
+#define __PNR_osf_wait4				-10372
+#define __PNR_osf_waitid			-10373
+#define __PNR_sethae				-10374
+#define __PNR_setpgrp				-10375
+#define __PNR_getgid				-10376
+#define __PNR_getpid				-10377
+#define __PNR_getuid				-10378
 
 /*
  * libseccomp syscall definitions
@@ -526,6 +649,12 @@
 
 #define __SNR_delete_module		__NR_delete_module
 
+#ifdef __NR_dipc
+#define __SNR_dipc			__NR_dipc
+#else
+#define __SNR_dipc			__PNR_dipc
+#endif
+
 #ifdef __NR_dup
 #define __SNR_dup			__NR_dup
 #else
@@ -587,6 +716,12 @@
 #define __SNR_execve			__NR_execve
 
 #define __SNR_execveat			__NR_execveat
+
+#ifdef __NR_exec_with_loader
+#define __SNR_exec_with_loader		__NR_exec_with_loader
+#else
+#define __SNR_exec_with_loader		__PNR_exec_with_loader
+#endif
 
 #define __SNR_exit			__NR_exit
 
@@ -810,6 +945,12 @@
 
 #define __SNR_getdents64		__NR_getdents64
 
+#ifdef __NR_getdtablesize
+#define __SNR_getdtablesize		__NR_getdtablesize
+#else
+#define __SNR_getdtablesize		__PNR_getdtablesize
+#endif
+
 #ifdef __NR_getegid
 #define __SNR_getegid			__NR_getegid
 #else
@@ -856,6 +997,12 @@
 #define __SNR_getgroups32		__NR_getgroups32
 #else
 #define __SNR_getgroups32		__PNR_getgroups32
+#endif
+
+#ifdef __NR_gethostname
+#define __SNR_gethostname		__NR_gethostname
+#else
+#define __SNR_gethostname		__PNR_gethostname
 #endif
 
 #define __SNR_getitimer			__NR_getitimer
@@ -963,6 +1110,24 @@
 #define __SNR_getxattr			__NR_getxattr
 
 #define __SNR_getxattrat		__NR_getxattrat
+
+#ifdef __NR_getxgid
+#define __SNR_getxgid			__NR_getxgid
+#else
+#define __SNR_getxgid			__PNR_getxgid
+#endif
+
+#ifdef __NR_getxpid
+#define __SNR_getxpid			__NR_getxpid
+#else
+#define __SNR_getxpid			__PNR_getxpid
+#endif
+
+#ifdef __NR_getxuid
+#define __SNR_getxuid			__NR_getxuid
+#else
+#define __SNR_getxuid			__PNR_getxuid
+#endif
 
 #ifdef __NR_gtty
 #define __SNR_gtty			__NR_gtty
@@ -1326,6 +1491,12 @@
 #define __SNR_nice			__PNR_nice
 #endif
 
+#ifdef __NR_old_adjtimex
+#define __SNR_old_adjtimex		__NR_oldf_adjtimex
+#else
+#define __SNR_old_adjtimex		__PNR_oldf_adjtimex
+#endif
+
 #ifdef __NR_oldfstat
 #define __SNR_oldfstat			__NR_oldfstat
 #else
@@ -1348,6 +1519,12 @@
 #define __SNR_oldstat			__NR_oldstat
 #else
 #define __SNR_oldstat			__PNR_oldstat
+#endif
+
+#ifdef __NR_oldumount
+#define __SNR_oldumount			__NR_oldumount
+#else
+#define __SNR_oldumount			__PNR_oldumount
 #endif
 
 #ifdef __NR_olduname
@@ -1379,6 +1556,660 @@
 #define __SNR_openat			__NR_openat
 
 #define __SNR_openat2			__NR_openat2
+
+#ifdef __NR_osf_adjtime
+#define __SNR_osf_adjtime		__NR_osf_adjtime
+#else
+#define __SNR_osf_adjtime		__PNR_osf_adjtime
+#endif
+
+#ifdef __NR_osf_afs_syscall
+#define __SNR_osf_afs_syscall		__NR_osf_afs_syscall
+#else
+#define __SNR_osf_afs_syscall		__PNR_osf_afs_syscall
+#endif
+
+#ifdef __NR_osf_alt_plock
+#define __SNR_osf_alt_plock		__NR_osf_alt_plock
+#else
+#define __SNR_osf_alt_plock		__PNR_osf_alt_plock
+#endif
+
+#ifdef __NR_osf_alt_setsid
+#define __SNR_osf_alt_setsid		__NR_osf_alt_setsid
+#else
+#define __SNR_osf_alt_setsid		__PNR_osf_alt_setsid
+#endif
+
+#ifdef __NR_osf_alt_sigpending
+#define __SNR_osf_alt_sigpending	__NR_osf_alt_sigpending
+#else
+#define __SNR_osf_alt_sigpending	__PNR_osf_alt_sigpending
+#endif
+
+#ifdef __NR_osf_asynch_daemon
+#define __SNR_osf_asynch_daemon		__NR_osf_asynch_daemon
+#else
+#define __SNR_osf_asynch_daemon		__PNR_osf_asynch_daemon
+#endif
+
+#ifdef __NR_osf_audcntl
+#define __SNR_osf_audcntl		__NR_osf_audcntl
+#else
+#define __SNR_osf_audcntl		__PNR_osf_audcntl
+#endif
+
+#ifdef __NR_osf_audgen
+#define __SNR_osf_audgen		__NR_osf_audgen
+#else
+#define __SNR_osf_audgen		__PNR_osf_audgen
+#endif
+
+#ifdef __NR_osf_chflags
+#define __SNR_osf_chflags		__NR_osf_chflags
+#else
+#define __SNR_osf_chflags		__PNR_osf_chflags
+#endif
+
+#ifdef __NR_osf_execve
+#define __SNR_osf_execve		__NR_osf_execve
+#else
+#define __SNR_osf_execve		__PNR_osf_execve
+#endif
+
+#ifdef __NR_osf_exportfs
+#define __SNR_osf_exportfs		__NR_osf_exportfs
+#else
+#define __SNR_osf_exportfs		__PNR_osf_exportfs
+#endif
+
+#ifdef __NR_osf_fchflags
+#define __SNR_osf_fchflags		__NR_osf_fchflags
+#else
+#define __SNR_osf_fchflags		__PNR_osf_fchflags
+#endif
+
+#ifdef __NR_osf_fdatasync
+#define __SNR_osf_fdatasync		__NR_osf_fdatasync
+#else
+#define __SNR_osf_fdatasync		__PNR_osf_fdatasync
+#endif
+
+#ifdef __NR_osf_fpathconf
+#define __SNR_osf_fpathconf		__NR_osf_fpathconf
+#else
+#define __SNR_osf_fpathconf		__PNR_osf_fpathconf
+#endif
+
+#ifdef __NR_osf_fstat
+#define __SNR_osf_fstat			__NR_osf_fstat
+#else
+#define __SNR_osf_fstat			__PNR_osf_fstat
+#endif
+
+#ifdef __NR_osf_fstatfs
+#define __SNR_osf_fstatfs		__NR_osf_fstatfs
+#else
+#define __SNR_osf_fstatfs		__PNR_osf_fstatfs
+#endif
+
+#ifdef __NR_osf_fstatfs64
+#define __SNR_osf_fstatfs64		__NR_osf_fstatfs64
+#else
+#define __SNR_osf_fstatfs64		__PNR_osf_fstatfs64
+#endif
+
+#ifdef __NR_osf_fuser
+#define __SNR_osf_fuser			__NR_osf_fuser
+#else
+#define __SNR_osf_fuser			__PNR_osf_fuser
+#endif
+
+#ifdef __NR_osf_getaddressconf
+#define __SNR_osf_getaddressconf	__NR_osf_getaddressconf
+#else
+#define __SNR_osf_getaddressconf	__PNR_osf_getaddressconf
+#endif
+
+#ifdef __NR_osf_getdirentries
+#define __SNR_osf_getdirentries		__NR_osf_getdirentries
+#else
+#define __SNR_osf_getdirentries		__PNR_osf_getdirentries
+#endif
+
+#ifdef __NR_osf_getdomainname
+#define __SNR_osf_getdomainname		__NR_osf_getdomainname
+#else
+#define __SNR_osf_getdomainname		__PNR_osf_getdomainname
+#endif
+
+#ifdef __NR_osf_getfh
+#define __SNR_osf_getfh			__NR_osf_getfh
+#else
+#define __SNR_osf_getfh			__PNR_osf_getfh
+#endif
+
+#ifdef __NR_osf_getfsstat
+#define __SNR_osf_getfsstat		__NR_osf_getfsstat
+#else
+#define __SNR_osf_getfsstat		__PNR_osf_getfsstat
+#endif
+
+#ifdef __NR_osf_gethostid
+#define __SNR_osf_gethostid		__NR_osf_gethostid
+#else
+#define __SNR_osf_gethostid		__PNR_osf_gethostid
+#endif
+
+#ifdef __NR_osf_getitimer
+#define __SNR_osf_getitimer		__NR_osf_getitimer
+#else
+#define __SNR_osf_getitimer		__PNR_osf_getitimer
+#endif
+
+#ifdef __NR_osf_getlogin
+#define __SNR_osf_getlogin		__NR_osf_getlogin
+#else
+#define __SNR_osf_getlogin		__PNR_osf_getlogin
+#endif
+
+#ifdef __NR_osf_getmnt
+#define __SNR_osf_getmnt		__NR_osf_getmnt
+#else
+#define __SNR_osf_getmnt		__PNR_osf_getmnt
+#endif
+
+#ifdef __NR_osf_getrusage
+#define __SNR_osf_getrusage		__NR_osf_getrusage
+#else
+#define __SNR_osf_getrusage		__PNR_osf_getrusage
+#endif
+
+#ifdef __NR_osf_getsysinfo
+#define __SNR_osf_getsysinfo		__NR_osf_getsysinfo
+#else
+#define __SNR_osf_getsysinfo		__PNR_osf_getsysinfo
+#endif
+
+#ifdef __NR_osf_gettimeofday
+#define __SNR_osf_gettimeofday		__NR_osf_gettimeofday
+#else
+#define __SNR_osf_gettimeofday		__PNR_osf_gettimeofday
+#endif
+
+#ifdef __NR_osf_kloadcall
+#define __SNR_osf_kloadcall		__NR_osf_kloadcall
+#else
+#define __SNR_osf_kloadcall		__PNR_osf_kloadcall
+#endif
+
+#ifdef __NR_osf_kmodcall
+#define __SNR_osf_kmodcall		__NR_osf_kmodcall
+#else
+#define __SNR_osf_kmodcall		__PNR_osf_kmodcall
+#endif
+
+#ifdef __NR_osf_lstat
+#define __SNR_osf_lstat			__NR_osf_lstat
+#else
+#define __SNR_osf_lstat			__PNR_osf_lstat
+#endif
+
+#ifdef __NR_osf_memcntl
+#define __SNR_osf_memcntl		__NR_osf_memcntl
+#else
+#define __SNR_osf_memcntl		__PNR_osf_memcntl
+#endif
+
+#ifdef __NR_osf_mincore
+#define __SNR_osf_mincore 		__NR_osf_mincore
+#else
+#define __SNR_osf_mincore		__PNR_osf_mincore
+#endif
+
+#ifdef __NR_osf_mount
+#define __SNR_osf_mount			__NR_osf_mount
+#else
+#define __SNR_osf_mount			__PNR_osf_mount
+#endif
+
+#ifdef __NR_osf_mremap
+#define __SNR_osf_mremap		__NR_osf_mremap
+#else
+#define __SNR_osf_mremap		__PNR_osf_mremap
+#endif
+
+#ifdef __NR_osf_msfs_syscall
+#define __SNR_osf_msfs_syscall		__NR_osf_msfs_syscall
+#else
+#define __SNR_osf_msfs_syscall		__PNR_osf_msfs_syscall
+#endif
+
+#ifdef __NR_osf_msleep
+#define __SNR_osf_msleep		__NR_osf_msleep
+#else
+#define __SNR_osf_msleep		__PNR_osf_msleep
+#endif
+
+#ifdef __NR_osf_mvalid
+#define __SNR_osf_mvalid		__NR_osf_mvalid
+#else
+#define __SNR_osf_mvalid		__PNR_osf_mvalid
+#endif
+
+#ifdef __NR_osf_mwakeup
+#define __SNR_osf_mwakeup		__NR_osf_mwakeup
+#else
+#define __SNR_osf_mwakeup		__PNR_osf_mwakeup
+#endif
+
+#ifdef __NR_osf_naccept
+#define __SNR_osf_naccept		__NR_osf_naccept
+#else
+#define __SNR_osf_naccept		__PNR_osf_naccept
+#endif
+
+#ifdef __NR_osf_nfssvc
+#define __SNR_osf_nfssvc		__NR_osf_nfssvc
+#else
+#define __SNR_osf_nfssvc		__PNR_osf_nfssvc
+#endif
+
+#ifdef __NR_osf_ngetpeername
+#define __SNR_osf_ngetpeername		__NR_osf_ngetpeername
+#else
+#define __SNR_osf_ngetpeername		__PNR_osf_ngetpeername
+#endif
+
+#ifdef __NR_osf_ngetsockname
+#define __SNR_osf_ngetsockname		__NR_osf_ngetsockname
+#else
+#define __SNR_osf_ngetsockname		__PNR_osf_ngetsockname
+#endif
+
+#ifdef __NR_osf_nrecvfrom
+#define __SNR_osf_nrecvfrom		__NR_osf_nrecvfrom
+#else
+#define __SNR_osf_nrecvfrom		__PNR_osf_nrecvfrom
+#endif
+
+#ifdef __NR_osf_nrecvmsg
+#define __SNR_osf_nrecvmsg		__NR_osf_nrecvmsg
+#else
+#define __SNR_osf_nrecvmsg		__PNR_osf_nrecvmsg
+#endif
+
+#ifdef __NR_osf_nsendmsg
+#define __SNR_osf_nsendmsg		__NR_osf_nsendmsg
+#else
+#define __SNR_osf_nsendmsg		__PNR_osf_nsendmsg
+#endif
+
+#ifdef __NR_osf_ntp_adjtime
+#define __SNR_osf_ntp_adjtime		__NR_osf_ntp_adjtime
+#else
+#define __SNR_osf_ntp_adjtime		__PNR_osf_ntp_adjtime
+#endif
+
+#ifdef __NR_osf_ntp_gettime
+#define __SNR_osf_ntp_gettime		__NR_osf_ntp_gettime
+#else
+#define __SNR_osf_ntp_gettime		__PNR_osf_ntp_gettime
+#endif
+
+#ifdef __NR_osf_old_creat
+#define __SNR_osf_old_creat		__NR_osf_old_creat
+#else
+#define __SNR_osf_old_creat		__PNR_osf_old_creat
+#endif
+
+#ifdef __NR_osf_old_fstat
+#define __SNR_osf_old_fstat		__NR_osf_old_fstat
+#else
+#define __SNR_osf_old_fstat		__PNR_osf_old_fstat
+#endif
+
+#ifdef __NR_osf_old_getpgrp
+#define __SNR_osf_old_getpgrp		__NR_osf_old_getpgrp
+#else
+#define __SNR_osf_old_getpgrp		__PNR_osf_old_getpgrp
+#endif
+
+#ifdef __NR_osf_old_killpg
+#define __SNR_osf_old_killpg		__NR_osf_old_killpg
+#else
+#define __SNR_osf_old_killpg		__PNR_osf_old_killpg
+#endif
+
+#ifdef __NR_osf_old_lstat
+#define __SNR_osf_old_lstat		__NR_osf_old_lstat
+#else
+#define __SNR_osf_old_lstat		__PNR_osf_old_lstat
+#endif
+
+#ifdef __NR_osf_old_open
+#define __SNR_osf_old_open		__NR_osf_old_open
+#else
+#define __SNR_osf_old_open		__PNR_osf_old_open
+#endif
+
+#ifdef __NR_osf_old_sigaction
+#define __SNR_osf_old_sigaction		__NR_osf_old_sigaction
+#else
+#define __SNR_osf_old_sigaction		__PNR_osf_old_sigaction
+#endif
+
+#ifdef __NR_osf_old_sigblock
+#define __SNR_osf_old_sigblock		__NR_osf_old_sigblock
+#else
+#define __SNR_osf_old_sigblock		__PNR_osf_old_sigblock
+#endif
+
+#ifdef __NR_osf_old_sigreturn
+#define __SNR_osf_old_sigreturn		__NR_osf_old_sigreturn
+#else
+#define __SNR_osf_old_sigreturn		__PNR_osf_old_sigreturn
+#endif
+
+#ifdef __NR_osf_old_sigsetmask
+#define __SNR_osf_old_sigsetmask	__NR_osf_old_sigsetmask
+#else
+#define __SNR_osf_old_sigsetmask	__PNR_osf_old_sigsetmask
+#endif
+
+#ifdef __NR_osf_old_sigvec
+#define __SNR_osf_old_sigvec		__NR_osf_old_sigvec
+#else
+#define __SNR_osf_old_sigvec		__PNR_osf_old_sigvec
+#endif
+
+#ifdef __NR_osf_old_stat
+#define __SNR_osf_old_stat		__NR_osf_old_stat
+#else
+#define __SNR_osf_old_stat		__PNR_osf_old_stat
+#endif
+
+#ifdef __NR_osf_old_vadvise
+#define __SNR_osf_old_vadvise		__NR_osf_old_vadvise
+#else
+#define __SNR_osf_old_vadvise		__PNR_osf_old_vadvise
+#endif
+
+#ifdef __NR_osf_old_vtrace
+#define __SNR_osf_old_vtrace		__NR_osf_old_vtrace
+#else
+#define __SNR_osf_old_vtrace		__PNR_osf_old_vtrace
+#endif
+
+#ifdef __NR_osf_old_wait
+#define __SNR_osf_old_wait		__NR_osf_old_wait
+#else
+#define __SNR_osf_old_wait		__PNR_osf_old_wait
+#endif
+
+#ifdef __NR_osf_oldquota
+#define __SNR_osf_oldquota		__NR_osf_oldquota
+#else
+#define __SNR_osf_oldquota		__PNR_osf_oldquota
+#endif
+
+#ifdef __NR_osf_pathconf
+#define __SNR_osf_pathconf		__NR_osf_pathconf
+#else
+#define __SNR_osf_pathconf		__PNR_osf_pathconf
+#endif
+
+#ifdef __NR_osf_pid_block
+#define __SNR_osf_pid_block		__NR_osf_pid_block
+#else
+#define __SNR_osf_pid_block		__PNR_osf_pid_block
+#endif
+
+#ifdef __NR_osf_pid_unblock
+#define __SNR_osf_pid_unblock		__NR_osf_pid_unblock
+#else
+#define __SNR_osf_pid_unblock		__PNR_osf_pid_unblock
+#endif
+
+#ifdef __NR_osf_plock
+#define __SNR_osf_plock			__NR_osf_plock
+#else
+#define __SNR_osf_plock			__PNR_osf_plock
+#endif
+
+#ifdef __NR_osf_priocntlset
+#define __SNR_osf_priocntlset		__NR_osf_priocntlset
+#else
+#define __SNR_osf_priocntlset		__PNR_osf_priocntlset
+#endif
+
+#ifdef __NR_osf_profil
+#define __SNR_osf_profil		__NR_osf_profil
+#else
+#define __SNR_osf_profil		__PNR_osf_profil
+#endif
+
+#ifdef __NR_osf_proplist_syscall
+#define __SNR_osf_proplist_syscall	__NR_osf_proplist_syscall
+#else
+#define __SNR_osf_proplist_syscall	__PNR_osf_proplist_syscall
+#endif
+
+#ifdef __NR_osf_reboot
+#define __SNR_osf_reboot		__NR_osf_reboot
+#else
+#define __SNR_osf_reboot		__PNR_osf_reboot
+#endif
+
+#ifdef __NR_osf_revoke
+#define __SNR_osf_revoke		__NR_osf_revoke
+#else
+#define __SNR_osf_revoke		__PNR_osf_revoke
+#endif
+
+#ifdef __NR_osf_sbrk
+#define __SNR_osf_sbrk			__NR_osf_sbrk
+#else
+#define __SNR_osf_sbrk			__PNR_osf_sbrk
+#endif
+
+#ifdef __NR_osf_security
+#define __SNR_osf_security		__NR_osf_security
+#else
+#define __SNR_osf_security		__PNR_osf_security
+#endif
+
+#ifdef __NR_osf_select
+#define __SNR_osf_select		__NR_osf_select
+#else
+#define __SNR_osf_select		__PNR_osf_select
+#endif
+
+#ifdef __NR_osf_set_program_attributes
+#define __SNR_osf_set_program_attributes	__NR_osf_set_program_attributes
+#else
+#define __SNR_osf_set_program_attributes	__PNR_osf_set_program_attributes
+#endif
+
+#ifdef __NR_osf_set_speculative
+#define __SNR_osf_set_speculative	__NR_osf_set_speculative
+#else
+#define __SNR_osf_set_speculative	__PNR_osf_set_speculative
+#endif
+
+#ifdef __NR_osf_sethostid
+#define __SNR_osf_sethostid		__NR_osf_sethostid
+#else
+#define __SNR_osf_sethostid		__PNR_osf_sethostid
+#endif
+
+#ifdef __NR_osf_setitimer
+#define __SNR_osf_setitimer		__NR_osf_setitimer
+#else
+#define __SNR_osf_setitimer		__PNR_osf_setitimer
+#endif
+
+#ifdef __NR_osf_setlogin
+#define __SNR_osf_setlogin		__NR_osf_setlogin
+#else
+#define __SNR_osf_setlogin		__PNR_osf_setlogin
+#endif
+
+#ifdef __NR_osf_setsysinfo
+#define __SNR_osf_setsysinfo		__NR_osf_setsysinfo
+#else
+#define __SNR_osf_setsysinfo		__PNR_osf_setsysinfo
+#endif
+
+#ifdef __NR_osf_settimeofday
+#define __SNR_osf_settimeofday		__NR_osf_settimeofday
+#else
+#define __SNR_osf_settimeofday		__PNR_osf_settimeofday
+#endif
+
+#ifdef __NR_osf_signal
+#define __SNR_osf_signal		__NR_osf_signal
+#else
+#define __SNR_osf_signal		__PNR_osf_signal
+#endif
+
+#ifdef __NR_osf_sigprocmask
+#define __SNR_osf_sigprocmask		__NR_osf_sigprocmask
+#else
+#define __SNR_osf_sigprocmask		__PNR_osf_sigprocmask
+#endif
+
+#ifdef __NR_osf_sigsendset
+#define __SNR_osf_sigsendset		__NR_osf_sigsendset
+#else
+#define __SNR_osf_sigsendset		__PNR_osf_sigsendset
+#endif
+
+#ifdef __NR_osf_sigstack
+#define __SNR_osf_sigstack		__NR_osf_sigstack
+#else
+#define __SNR_osf_sigstack		__PNR_osf_sigstack
+#endif
+
+#ifdef __NR_osf_sigwaitprim
+#define __SNR_osf_sigwaitprim		__NR_osf_sigwaitprim
+#else
+#define __SNR_osf_sigwaitprim		__PNR_osf_sigwaitprim
+#endif
+
+#ifdef __NR_osf_sstk
+#define __SNR_osf_sstk			__NR_osf_sstk
+#else
+#define __SNR_osf_sstk			__PNR_osf_sstk
+#endif
+
+#ifdef __NR_osf_stat
+#define __SNR_osf_stat			__NR_osf_stat
+#else
+#define __SNR_osf_stat			__PNR_osf_stat
+#endif
+
+#ifdef __NR_osf_statfs
+#define __SNR_osf_statfs		__NR_osf_statfs
+#else
+#define __SNR_osf_statfs		__PNR_osf_statfs
+#endif
+
+#ifdef __NR_osf_statfs64
+#define __SNR_osf_statfs64		__NR_osf_statfs64
+#else
+#define __SNR_osf_statfs64		__PNR_osf_statfs64
+#endif
+
+#ifdef __NR_osf_subsys_info
+#define __SNR_osf_subsys_info		__NR_osf_subsys_info
+#else
+#define __SNR_osf_subsys_info		__PNR_osf_subsys_info
+#endif
+
+#ifdef __NR_osf_swapctl
+#define __SNR_osf_swapctl		__NR_osf_swapctl
+#else
+#define __SNR_osf_swapctl		__PNR_osf_swapctl
+#endif
+
+#ifdef __NR_osf_swapon
+#define __SNR_osf_swapon		__NR_osf_swapon
+#else
+#define __SNR_osf_swapon		__PNR_osf_swapon
+#endif
+
+#ifdef __NR_osf_syscall
+#define __SNR_osf_syscall		__NR_osf_syscall
+#else
+#define __SNR_osf_syscall		__PNR_osf_syscall
+#endif
+
+#ifdef __NR_osf_sysinfo
+#define __SNR_osf_sysinfo		__NR_osf_sysinfo
+#else
+#define __SNR_osf_sysinfo		__PNR_osf_sysinfo
+#endif
+
+#ifdef __NR_osf_table
+#define __SNR_osf_table			__NR_osf_table
+#else
+#define __SNR_osf_table			__PNR_osf_table
+#endif
+
+#ifdef __NR_osf_uadmin
+#define __SNR_osf_uadmin		__NR_osf_uadmin
+#else
+#define __SNR_osf_uadmin		__PNR_osf_uadmin
+#endif
+
+#ifdef __NR_osf_usleep_thread
+#define __SNR_osf_usleep_thread		__NR_osf_usleep_thread
+#else
+#define __SNR_osf_usleep_thread		__PNR_osf_usleep_thread
+#endif
+
+#ifdef __NR_osf_uswitch
+#define __SNR_osf_uswitch		__NR_osf_uswitch
+#else
+#define __SNR_osf_uswitch		__PNR_osf_uswitch
+#endif
+
+#ifdef __NR_osf_utc_adjtime
+#define __SNR_osf_utc_adjtime		__NR_osf_utc_adjtime
+#else
+#define __SNR_osf_utc_adjtime		__PNR_osf_utc_adjtime
+#endif
+
+#ifdef __NR_osf_utc_gettime
+#define __SNR_osf_utc_gettime		__NR_osf_utc_gettime
+#else
+#define __SNR_osf_utc_gettime		__PNR_osf_utc_gettime
+#endif
+
+#ifdef __NR_osf_utimes
+#define __SNR_osf_utimes		__NR_osf_utimes
+#else
+#define __SNR_osf_utimes		__PNR_osf_utimes
+#endif
+
+#ifdef __NR_osf_utsname
+#define __SNR_osf_utsname		__NR_osf_utsname
+#else
+#define __SNR_osf_utsname		__PNR_osf_utsname
+#endif
+
+#ifdef __NR_osf_wait4
+#define __SNR_osf_wait4			__NR_osf_wait4
+#else
+#define __SNR_osf_wait4			__PNR_osf_wait4
+#endif
+
+#ifdef __NR_osf_waitid
+#define __SNR_osf_waitid		__NR_osf_waitid
+#else
+#define __SNR_osf_waitid		__PNR_osf_waitid
+#endif
 
 #ifdef __NR_pause
 #define __SNR_pause			__NR_pause
@@ -1886,6 +2717,12 @@
 #define __SNR_setgroups32		__PNR_setgroups32
 #endif
 
+#ifdef __NR_sethae
+#define __SNR_sethae			__NR_sethae
+#else
+#define __SNR_sethae			__PNR_sethae
+#endif
+
 #define __SNR_sethostname		__NR_sethostname
 
 #define __SNR_setitimer			__NR_setitimer
@@ -1893,6 +2730,12 @@
 #define __SNR_setns			__NR_setns
 
 #define __SNR_setpgid			__NR_setpgid
+
+#ifdef __NR_setpgrp
+#define __SNR_setpgrp			__NR_setpgrp
+#else
+#define __SNR_setpgrp			__PNR_setpgrp
+#endif
 
 #define __SNR_setpriority		__NR_setpriority
 
